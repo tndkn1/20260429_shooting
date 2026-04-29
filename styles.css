@@ -1,0 +1,89 @@
+:root {
+  color-scheme: dark;
+  font-family: "Noto Sans JP", sans-serif;
+  background: radial-gradient(circle at top, #2b3a56 0%, #0c1220 100%);
+  color: #f4f4f8;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.container {
+  width: min(100%, 540px);
+  text-align: center;
+}
+h1 {
+  margin-bottom: 8px;
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+}
+p {
+  margin: 6px 0 18px;
+  color: #d1d8e3;
+}
+.game-board {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+}
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, #11192d 0%, #0c1020 100%);
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+#scoreDisplay {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  font-size: 1rem;
+  background: rgba(6, 12, 26, 0.75);
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+#message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(2, 5, 15, 0.85);
+  gap: 16px;
+  font-size: 1.1rem;
+  color: #fff;
+  pointer-events: auto;
+}
+.hidden {
+  display: none;
+}
+#restartButton {
+  appearance: none;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #45a3ff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#restartButton:hover {
+  background: #5ebcff;
+}
+.tips {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: #a7b0c3;
+}
