@@ -67,7 +67,7 @@ canvas {
   pointer-events: auto;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 #restartButton {
   appearance: none;
